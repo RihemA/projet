@@ -1,77 +1,75 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
+	<head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=device-dpi" />
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+		<title>Mentoring</title>
+		
+		<!-- Favicon -->
+		<link rel="shortcut icon" type="image/x-icon" href="{{ asset('front/img/favicon.png') }}">
+		
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="{{ asset('front/css/bootstrap.min.css') }}">
+		
+		<!-- Fontawesome CSS -->
+		<link rel="stylesheet" href="{{ asset('front/plugins/fontawesome/css/fontawesome.min.css') }}">
+		<link rel="stylesheet" href="{{ asset('front/plugins/fontawesome/css/all.min.css') }}">
 
-    <title>Eduor || Online Education Learning HTML Template</title>
+		<!-- Owl Carousel CSS -->
+		<link rel="stylesheet" href="{{ asset('front/css/owl.carousel.min.css') }}">
+		<link rel="stylesheet" href="{{ asset('front/css/owl.theme.default.min.css') }}">
+		
+		<!-- Slick CSS -->
+		<link rel="stylesheet" href="{{ asset('front/plugins/slick/slick.css') }}">
+		<link rel="stylesheet" href="{{ asset('front/plugins/slick/slick-theme.css') }}">
+		
+		<!-- Aos CSS -->
+		<link rel="stylesheet" href="{{ asset('front/plugins/aos/aos.css') }}">
 
-    <link rel="icon" type="image/png" href="{{ asset('front/images/favicon.png') }}">
-    <link rel="stylesheet" href="{{ asset('front/css/all.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('front/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('front/css/venobox.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('front/css/animated_barfiller.css') }}">
-    <link rel="stylesheet" href="{{ asset('front/css/slick.css') }}">
-    <link rel="stylesheet" href="{{ asset('front/css/animate.css') }}">
-    <link rel="stylesheet" href="{{ asset('front/css/nice-select.css') }}">
+		<!-- Main CSS -->
+		<link rel="stylesheet" href="{{ asset('front/css/style.css') }}">
+	
+	</head>
+	<body class="body-home-one">
+		<!-- Main Wrapper -->
+		<div class="main-wrapper">
+		
+			<!-- Header -->
+            @include('layouts.front.header')
+			<!-- /Header -->
+			
+			@yield('content')
+			
+			<!-- Footer -->
+			@include('layouts.front.footer')
+			<!-- /Footer -->
+		</div>
+		<!-- /Main Wrapper -->
 
-    <link rel="stylesheet" href="{{ asset('front/css/spacing.css') }}">
-    <link rel="stylesheet" href="{{ asset('front/css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('front/css/responsive.css') }}">
-</head>
-
-<body class="home_3">
-    
-    @include('layouts.front.header')
-
-    @yield('content')
-    @include('layouts.front.footer')
-
-    <!--=================================
-        FOOTER 3 START
-    ==================================-->
-    
-    <!--=================================
-        FOOTER 3 END
-    ==================================-->
-
-
-    <!--=============================
-        SCROLL BUTTON 2 START
-    ==============================-->
-    <div class="tf__scroll_btn_2 tf__scroll_btn"><i class="far fa-long-arrow-up"></i></div>
-    <!--=============================
-        SCROLL BUTTON 2 END 
-    ==============================-->
-
-
-    <!--jquery library js-->
-    <script src="{{ asset('front/js/jquery-3.6.3.min.js') }}"></script>
-    <!--bootstrap js-->
-    <script src="{{ asset('front/js/bootstrap.bundle.min.js') }}"></script>
-    <!--font-awesome js-->
-    <script src="{{ asset('front/js/Font-Awesome.js') }}"></script>
-    <!--venobox js-->
-    <script src="{{ asset('front/js/venobox.min.js') }}"></script>
-    <!--slick slider js-->
-    <script src="{{ asset('front/js/slick.min.js') }}"></script>
-    <!--wow js-->
-    <script src="{{ asset('front/js/wow.min.js') }}"></script>
-    <!--counterup js-->
-    <script src="{{ asset('front/js/jquery.waypoints.min.js') }}"></script>
-    <script src="{{ asset('front/js/jquery.countup.min.js') }}"></script>
-    <!--animated barfiller js-->
-    <script src="{{ asset('front/js/animated_barfiller.js') }}"></script>
-    <!--sticky sidebar js-->
-    <script src="{{ asset('front/js/sticky_sidebar.js') }}"></script>
-    <!--nice select js-->
-    <script src="{{ asset('front/js/jquery.nice-select.min.js') }}"></script>
-
-    <!--main/custom js-->
-    <script src="{{ asset('front/js/main.js') }}"></script>
-
-</body>
-
+		
+		
+		<!-- jQuery -->
+		<script src="{{ asset('front/js/jquery-3.6.0.min.js') }}"></script>
+		
+		<!-- Bootstrap Core JS -->
+		<script src="{{ asset('front/js/bootstrap.bundle.min.js') }}"></script>
+		
+		<!-- counterup JS -->
+		<script src="{{ asset('front/js/jquery.waypoints.js') }}"></script>
+		<script src="{{ asset('front/js/jquery.counterup.min.js') }}"></script>
+		
+		<!-- Owl Carousel -->
+		<script src="{{ asset('front/js/owl.carousel.min.js') }}"></script>		
+		
+		<!-- Slick Slider -->
+		<script src="{{ asset('front/plugins/slick/slick.js') }}"></script>
+		
+		<!-- Aos -->
+		<script src="{{ asset('front/plugins/aos/aos.js') }}"></script>
+		
+		<!-- Custom JS -->
+		<script src="{{ asset('front/js/script.js') }}"></script>
+		
+	</body>
 </html>

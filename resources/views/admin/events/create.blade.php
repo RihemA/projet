@@ -22,17 +22,17 @@
                                     <div class="row g-gs">
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label class="form-label" for="fv-full-name">Full Name</label>
+                                                <label class="form-label" for="fv-full-name">Title</label>
                                                 <div class="form-control-wrap">
                                                     <input type="text" class="form-control" id="fv-full-name"
-                                                        name="name" required>
+                                                        name="title" required>
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label class="form-label" for="description">Message</label>
+                                                <label class="form-label" for="description">Description</label>
                                                 <div class="form-control-wrap">
                                                     <textarea class="form-control form-control-sm" id="description" name="description" placeholder="Write your message"
                                                         required></textarea>

@@ -1,83 +1,65 @@
-<!--=================================
-        TOPBAR 2 START
-    ==================================-->
-    <section class="tf__topbar tf__topbar_2">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-6 col-md-6 d-none d-md-block">
-                    <div class="tf__topbar_left d-flex flex-wrap align-items-center">
-                        <p>Visitez nos pages sociales:</p>
-                        <ul class="d-flex flex-wrap">
-                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                        </ul>
-                    </div>
+<header class="header header-five">
+    <div class="header-fixed">
+        <nav class="navbar navbar-expand-lg header-nav">
+            <div class="container">
+                <div class="navbar-header">
+                    <a id="mobile_btn" href="javascript:void(0);">
+                        <span class="bar-icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </a>
+                    <a href="index.html" class="navbar-brand logo">
+                        <img src="assets/img/logo-7.png" class="img-fluid" alt="Logo">
+                    </a>
                 </div>
-                <div class="col-xl-6 col-md-6">
-                    <div class="tf__topbar_right">
-                        <ul class="d-flex flex-wrap">
-                            @if (auth()->user())
-                            <li><a href="/profile">{{ auth()->user()->name }}</a></li>
-                            <li>
-                                <a href="{{ route('logout') }}"
-                                    onclick="event.preventDefault();
+                <div class="main-menu-wrapper">
+                    <div class="menu-header">
+                        <a href="index.html" class="menu-logo">
+                            <img src="assets/img/logo-7.png" class="img-fluid" alt="Logo">
+                        </a>
+                        <a id="menu_close" class="menu-close" href="javascript:void(0);">
+                            <i class="fas fa-times"></i>
+                        </a>
+                    </div>
+                    <ul class="main-nav">
+                        <li class="active has-submenu">
+                            <a href="/">Accueil</a>
+                         </li>
+                         <li class="active has-submenu">
+                            <a href="/event">Événement</a>
+                         </li>
+                         <li class="login-link">
+                            <a href="/login">Connexion / Inscription</a>
+                         </li>
+                    </ul>
+                </div>
+                <ul class="nav header-navbar-rht">
+                    @if (auth()->user())
+                        <li class="nav-item">
+                            <a href="/profile" class="nav-link">{{ auth()->user()->name }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('logout') }}"  class="nav-link header-login"
+                                onclick="event.preventDefault();
                                               document.getElementById('logout-form').submit();">
-                                    <em class="icon ni ni-signout"></em><span>Sign out</span>
-                                </a>
-                            </li>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                                class="d-none">
-                                @csrf
-                            </form>
-                            @else
-                            <li><a href="/login">Connexion </a></li>
-                            <li><a href="/register">Inscription</a></li>
-                            @endif
-                           
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--=================================
-        TOPBAR 2 END
-    ==================================-->
-
-
-    <!--=================================
-        MAIN MENU 3 START
-    ==================================-->
-    <nav class="navbar navbar-expand-lg main_menu main_menu_3">
-        <div class="container">
-            <a class="navbar-brand" href="index_3.html">
-                <img src="images/logo3.png" alt="Eduor" class="img-fluid w-100">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="far fa-bars menu_icon"></i>
-                <i class="far fa-times close_icon"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="/">Accueil </a>                        
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/about">À propos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/event">Événements</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/contact">Contactez-nous</a>
-                    </li>
+                                <em class="icon ni ni-signout"></em><span>Sign out</span>
+                            </a>
+                        </li>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                    @else
+                        <li class="nav-item">
+                            <a class="nav-link" href="login">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link header-login" href="register">Sign up</a>
+                        </li>
+                    @endif
                 </ul>
             </div>
-        </div>
-    </nav>
-    <!--=================================
-        MAIN MENU 3 END
-    ==================================-->
+        </nav>
+    </div>
+</header>

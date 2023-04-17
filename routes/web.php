@@ -15,6 +15,7 @@ use App\Http\Controllers\front\EventController as MemberEventController;
 use App\Http\Controllers\front\IdeaController;
 use App\Http\Controllers\front\MessageController;
 use App\Http\Controllers\front\RatingController;
+use App\Http\Controllers\front\ProfileController;
 
 Route::get('/', [App\Http\Controllers\front\FrontController::class, 'index'])->name('home');
 
@@ -45,8 +46,8 @@ Route::middleware('auth')->prefix('admin')->group(function () {
 });
 
 // Member routes
-Route::middleware('auth')->prefix('members')->group(function () {
-    Route::get('/', [MemberEventController::class, 'index'])->name('members.dashboard');    
+Route::middleware('auth')->prefix('profile')->group(function () {
+    Route::get('/', [ProfileController::class, 'index'])->name('members.dashboard');    
     Route::resource('ideas', IdeaController::class);
     Route::resource('messages', MessageController::class);
     Route::resource('ratings', RatingController::class);

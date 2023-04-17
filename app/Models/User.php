@@ -47,4 +47,9 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(Event::class, 'subscriptions', 'user_id', 'event_id')->withTimestamps();
     }
+
+    public function ideas()
+    {
+        return $this->hasMany(Idea::class);
+    }
 }
